@@ -1,0 +1,41 @@
+[
+    {
+        "name": "Teh Pucuk",
+        "price": "3000",
+        "desc": "Teh Pucuk 500 ML",
+        "productimg": [
+            {
+                "public_id": "products/56551c18e52d99c43c0ddc438b9cd203-removebg-preview_jkbv1n",
+                "url": "https://res.cloudinary.com/dfdzjhr8x/image/upload/v1625100143/56551c18e52d99c43c0ddc438b9cd203-removebg-preview_jkbv1n.png"
+            }
+        ],
+        "category": "Minuman",
+        "stock": 100
+    },
+    {
+        "name": "Le Minerale",
+        "price": "3500",
+        "desc": "Le Minerale 500 ML",
+        "productimg": [
+            {
+                "public_id": "products/096191675b3682f21f75d01c8c3ed6ac-removebg-preview_tunmsb",
+                "url": "https://res.cloudinary.com/dfdzjhr8x/image/upload/v1625101139/096191675b3682f21f75d01c8c3ed6ac-removebg-preview_tunmsb.png"
+            }
+        ],
+        "category": "Minuman",
+        "stock": 100
+    },
+    {
+        "name": "Pronas",
+        "price": "6000",
+        "desc": "Pronas Corned Beef",
+        "productimg": [
+            {
+                "public_id": "products/1bdcacce1ac65ed94661caf3b20b2d31_jowucm",
+                "url": "https://res.cloudinary.com/dfdzjhr8x/image/upload/v1625101344/1bdcacce1ac65ed94661caf3b20b2d31_jowucm.jpg"
+            }
+        ],
+        "category": "Makanan",
+        "stock": 100
+    }
+]
