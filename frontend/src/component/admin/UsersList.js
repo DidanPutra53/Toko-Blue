@@ -8,7 +8,7 @@ import Sidebar from './Sidebar'
 
 import { useAlert } from 'react-alert'
 import { useDispatch, useSelector } from 'react-redux'
-import { allUsers, clearError } from '../../actions/userAction'
+import { allUsers, clearError, deleteUser } from '../../actions/userAction'
 import { userConstants } from '../../constants/userConstant'
 
 import { FiTrash, FiEdit } from "react-icons/fi";
@@ -19,6 +19,7 @@ const UsersList = ({ history }) => {
     const dispatch = useDispatch();
 
     const { loading, error, users } = useSelector(state => state.allUsers);
+    const { isDeleted } = useSelector(state => state.user)
 
     useEffect(() => {
         dispatch(allUsers());
@@ -28,13 +29,17 @@ const UsersList = ({ history }) => {
             dispatch(clearError())
         }
 
-        // if (isDeleted) {
-        //     alert.success('User deleted successfully');
-        //     history.push('/admin/users');
-        //     dispatch({ type: DELETE_USER_RESET })
-        // }
+        if (isDeleted) {
+            alert.success('User deleted successfully');
+            history.push('/admin/user');
+            dispatch({ type: userConstants.DELETE_USER_RESET })
+        }
 
-    }, [dispatch, alert, error, history])
+    }, [dispatch, alert, error, history, isDeleted])
+
+    const deleteUserHandler = (id) => {
+        dispatch(deleteUser(id))
+    }
 
     const setUsers = () => {
         const data = {
@@ -78,7 +83,7 @@ const UsersList = ({ history }) => {
                         <Link to={`/admin/user/${user._id}`}>
                             <FiEdit />
                         </Link>
-                        <button style={{ border: "none", backgroundColor: "transparent" }} className="trash-user">
+                        <button style={{ border: "none", backgroundColor: "transparent" }} className="trash-user" onClick={() => deleteUserHandler(user._id)}>
                             <FiTrash />
                         </button>
                     </div>
@@ -90,11 +95,11 @@ const UsersList = ({ history }) => {
     return (
         <Fragment>
             <MetaData title={'All Users'} />
-            <div className="row">
-                <div className="col-12 col-md-2">
+            <div className="product-list-admin">
+                <div className="sidebar-dashboard">
                     <Sidebar />
                 </div>
-                <div className="col-12 col-md-10">
+                <div className="alluser">
                     <Fragment>
                         <h1 className="my-5">All Users</h1>
                         {loading ? <Loader /> : (

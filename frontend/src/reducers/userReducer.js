@@ -58,6 +58,7 @@ export const userReducer = (state = {}, action) => {
     switch (action.type) {
         case userConstants.UPDATE_PROFILE_REQUEST:
         case userConstants.UPDATE_PASSWORD_REQUEST:
+        case userConstants.DELETE_USER_REQUEST:
             return {
                 ...state,
                 loading: true,
@@ -69,14 +70,27 @@ export const userReducer = (state = {}, action) => {
                 loading: false,
                 isUpdated: action.payload
             }
+        case userConstants.DELETE_USER_SUCCESS:
+            return {
+                ...state,
+                loading: false,
+                isDeleted: action.payload
+            }
         case userConstants.UPDATE_PROFILE_RESET:
         case userConstants.UPDATE_PASSWORD_RESET:
             return {
                 ...state,
                 isUpdated: false
             }
+        case userConstants.DELETE_USER_RESET:
+            return {
+                ...state,
+                isDeleted: false
+            }
+
         case userConstants.UPDATE_PROFILE_FAILURE:
         case userConstants.UPDATE_PASSWORD_FAILURE:
+        case userConstants.DELETE_USER_FAILURE:
             return {
                 ...state,
                 loading: false,

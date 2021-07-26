@@ -7,12 +7,14 @@ import { FiGrid, FiUser, FiBox, FiShoppingBag } from "react-icons/fi";
 import { getAdminsProducts } from '../../actions/product.actions'
 import { useDispatch, useSelector } from 'react-redux';
 import { allOrders } from '../../actions/orderAction'
+import { allUsers } from '../../actions/userAction'
 
 const Dashboard = () => {
 
     const dispatch = useDispatch()
 
     const { products } = useSelector(state => state.products)
+    const { users } = useSelector(state => state.allUsers)
     const { orders, totalAmount, loading } = useSelector(state => state.allOrder)
 
     let outOfStock = 0;
@@ -25,6 +27,7 @@ const Dashboard = () => {
     useEffect(() => {
         dispatch(getAdminsProducts())
         dispatch(allOrders())
+        dispatch(allUsers())
     }, [dispatch])
 
     return (
@@ -53,7 +56,7 @@ const Dashboard = () => {
                                     <Link to="/admin/user" className="box">
                                         <FiUser />
                                         <p>User</p>
-                                        <b>x (User)</b>
+                                        <b>{users && users.length} (User)</b>
                                     </Link>
                                     <div className="box">
                                         <FiBox />

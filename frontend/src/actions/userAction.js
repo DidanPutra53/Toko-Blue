@@ -189,6 +189,28 @@ export const allUsers = () => async (dispatch) => {
     }
 }
 
+// Delete user - ADMIN
+export const deleteUser = (id) => async (dispatch) => {
+    try {
+
+        dispatch({ type: userConstants.DELETE_USER_REQUEST })
+
+        const { data } = await axios.delete(`/api/v1/admin/users/${id}`)
+
+        dispatch({
+            type: userConstants.DELETE_USER_SUCCESS,
+            payload: data.success
+        })
+
+    } catch (error) {
+        dispatch({
+            type: userConstants.DELETE_USER_FAILURE,
+            payload: error.response.data.message
+        })
+    }
+}
+
+
 //clear error
 export const clearError = () => async (dispatch) => {
     dispatch({
