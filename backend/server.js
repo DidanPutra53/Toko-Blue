@@ -12,9 +12,9 @@ process.on('uncaughtException', err => {
 
 // setting up config cloudinary
 cloudinary.config({
-    cloud_name: 'dfdzjhr8x',
-    api_key: '785841117236965',
-    api_secret: 'DuodOEx8fDpWx77XsDqTd41FP58'
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+    api_key: process.env.CLOUDINARY_API_KEY,
+    api_secret: process.env.CLOUDINARY_API_SECRET
 })
 
 
