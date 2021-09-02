@@ -15,7 +15,7 @@ const NewProduct = ({ history }) => {
     const [category, setCategory] = useState('')
     const [stock, setStock] = useState(0)
     const [productimg, setProductImg] = useState([])
-    const [imagesPreview, setImagesPreview] = useState([])
+    const [productimgPreview, setproductimgPreview] = useState([])
 
     const categories = [
         'Minuman',
@@ -59,14 +59,14 @@ const NewProduct = ({ history }) => {
     const onChange = e => {
         const files = Array.from(e.target.files)
 
-        setImagesPreview([])
+        setproductimgPreview([])
         setProductImg([])
 
         files.forEach(file => {
             const reader = new FileReader();
             reader.onload = () => {
                 if (reader.readyState === 2) {
-                    setImagesPreview(oldArray => [...oldArray, reader.result])
+                    setproductimgPreview(oldArray => [...oldArray, reader.result])
                     setProductImg(oldArray => [...oldArray, reader.result])
                 }
             }
@@ -149,7 +149,7 @@ const NewProduct = ({ history }) => {
                                 </label>
                             </div>
 
-                            {imagesPreview.map(img => (
+                            {productimgPreview.map(img => (
                                 <div className="image-preview">
                                     <label>Image Preview</label>
                                     <img src={img} key={img} alt="Images Preview" className="mt-3 mr-2" width="150" height="150" />

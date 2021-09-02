@@ -11,9 +11,9 @@ function Footer() {
                             <a>Instagram</a>
                         </div>
                         <div className="list-footer">
-                            <p>Tentang</p>
-                            <a>Toko Blue</a>
-                            <a>Gerai Toko Blue</a>
+                            <p>Kontak</p>
+                            <a>WhatsApp Toko Blue :</a>
+                            <a>0851xxxxxxxx</a>
                         </div>
                     </div>
                     <div className="copyright-footer">

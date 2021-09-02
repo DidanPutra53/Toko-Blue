@@ -45,7 +45,7 @@ const ConfirmOrder = ({ history }) => {
                                     <p>{shippingInfo && shippingInfo.address}</p>
                                 </div>
                                 <div>
-                                    <p>{`${shippingInfo.city}, ${shippingInfo.postialCode}`}</p>
+                                    <p>{shippingInfo && `${shippingInfo.city}, ${shippingInfo.postialCode}`}</p>
                                 </div>
                             </div>
                             {

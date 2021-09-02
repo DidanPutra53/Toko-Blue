@@ -210,7 +210,6 @@ body, html{
 .product-content{
     display: flex;
     padding: 50px 75px;
-    height: 100vh;
 }
 .category-list{
     background: rgb( 54, 161, 212);
@@ -251,6 +250,7 @@ body, html{
 
 .product-list{
     display: flex;
+    flex-wrap: wrap;
 }
 
 //PRODUCTDETAIL.js//

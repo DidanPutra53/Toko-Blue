@@ -64,9 +64,6 @@ const Dashboard = () => {
                                         <b>{outOfStock} (Barang)</b>
                                     </div>
                                 </div>
-                                <div className="info-dashboard">
-                                    <p>Pendapatan</p>
-                                </div>
                             </div>
                         </Fragment>
                     )

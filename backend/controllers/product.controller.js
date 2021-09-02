@@ -25,6 +25,7 @@ exports.newProduct = catchAsyncErrors(async (req, res, next) => {
         })
     }
     req.body.productimg = productimgLinks
+    req.body.user = req.user.id
 
     req.body.user = req.user.id
     const product = await Product.create(req.body)
