@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/Toko-Blue/static/css/main.2574c6a6.chunk.css",
+    "main.js": "/Toko-Blue/static/js/main.eda36a23.chunk.js",
+    "main.js.map": "/Toko-Blue/static/js/main.eda36a23.chunk.js.map",
+    "runtime-main.js": "/Toko-Blue/static/js/runtime-main.0f962157.js",
+    "runtime-main.js.map": "/Toko-Blue/static/js/runtime-main.0f962157.js.map",
+    "static/css/2.ed1298f3.chunk.css": "/Toko-Blue/static/css/2.ed1298f3.chunk.css",
+    "static/js/2.0ea0b81d.chunk.js": "/Toko-Blue/static/js/2.0ea0b81d.chunk.js",
+    "static/js/2.0ea0b81d.chunk.js.map": "/Toko-Blue/static/js/2.0ea0b81d.chunk.js.map",
+    "index.html": "/Toko-Blue/index.html",
+    "static/css/2.ed1298f3.chunk.css.map": "/Toko-Blue/static/css/2.ed1298f3.chunk.css.map",
+    "static/css/main.2574c6a6.chunk.css.map": "/Toko-Blue/static/css/main.2574c6a6.chunk.css.map",
+    "static/js/2.0ea0b81d.chunk.js.LICENSE.txt": "/Toko-Blue/static/js/2.0ea0b81d.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/Toko-Blue/static/media/Poppins-Black.eacee5bb.ttf",
+    "static/media/ciki_bol.8dc47723.png": "/Toko-Blue/static/media/ciki_bol.8dc47723.png",
+    "static/media/login.ee44ca5c.jpg": "/Toko-Blue/static/media/login.ee44ca5c.jpg",
+    "static/media/logo.9b1bb1d1.png": "/Toko-Blue/static/media/logo.9b1bb1d1.png",
+    "static/media/logo2.34025350.ico": "/Toko-Blue/static/media/logo2.34025350.ico",
+    "static/media/logodua.b907a0d0.png": "/Toko-Blue/static/media/logodua.b907a0d0.png",
+    "static/media/oreo.83ec61d5.png": "/Toko-Blue/static/media/oreo.83ec61d5.png",
+    "static/media/tehate.7efeb8fa.jpg": "/Toko-Blue/static/media/tehate.7efeb8fa.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0f962157.js",
+    "static/css/2.ed1298f3.chunk.css",
+    "static/js/2.0ea0b81d.chunk.js",
+    "static/css/main.2574c6a6.chunk.css",
+    "static/js/main.eda36a23.chunk.js"
+  ]
+}
